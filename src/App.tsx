@@ -105,25 +105,25 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      <header className="flex-shrink-0 py-6 text-center">
-        <h1 className="text-black text-2xl font-bold">提醒我</h1>
+    <div className="h-full bg-white flex flex-col overflow-hidden">
+      <header className="flex-shrink-0 py-4 text-center">
+        <h1 className="text-black text-xl font-bold">提醒我</h1>
       </header>
 
-      <main className="flex-1 overflow-y-auto scrollbar-hide min-h-0">
+      <main className="flex-1 overflow-y-auto scrollbar-hide min-h-0 overscroll-contain">
         <TaskList tasks={tasks} onUpdate={handleUpdate} onDelete={handleDelete} />
       </main>
 
-      <footer className="flex-shrink-0 py-6 px-4 border-t border-black/10">
+      <footer className="flex-shrink-0 py-4 px-4 border-t border-black/10">
         <div className="flex flex-col items-center gap-3">
           <button
             onClick={() => setShowManualAdd(true)}
-            className="w-20 h-20 rounded-full border-2 border-black flex items-center justify-center text-black hover:bg-black/5 transition-all active:scale-95 bg-white"
+            className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-black hover:bg-black/5 transition-all active:scale-95 bg-white"
             aria-label="添加新任务"
           >
-            <Plus size={32} />
+            <Plus size={28} />
           </button>
-          <p className="text-black/40 text-sm">添加新任务</p>
+          <p className="text-black/40 text-xs">添加新任务</p>
         </div>
       </footer>
       {showManualAdd && (

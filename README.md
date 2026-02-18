@@ -37,48 +37,37 @@ npm run build
 
 ## 打包成 iOS App
 
-推荐使用 **Capacitor** 将 Web 应用打包为原生 iOS App：
+项目已配置 **Capacitor**，可直接打包为原生 iOS App。
 
-### 1. 安装 Capacitor
+### 前提
 
-```bash
-npm install @capacitor/core @capacitor/cli @capacitor/ios
-npx cap init
-```
+- macOS 系统
+- 安装 [Xcode](https://apps.apple.com/app/xcode/id497799835)（App Store 免费下载）
 
-按提示填写 App 名称和包名（如 `com.yourname.remindme`）。
-
-### 2. 添加 iOS 平台
+### 一键打开 Xcode
 
 ```bash
-npm run build
-npx cap add ios
-npx cap sync
+npm run ios
 ```
 
-### 3. 在 Xcode 中打开并运行
+会自动完成：构建 → 同步到 iOS 项目 → 打开 Xcode
 
-```bash
-npx cap open ios
-```
+### 在 Xcode 中
 
-在 Xcode 中：
-- 选择真机或模拟器
-- 点击运行（▶️）
-- 如需上架 App Store：配置签名、创建 App ID、提交审核
+1. 选择模拟器（如 iPhone 15）或连接真机
+2. 点击运行按钮 ▶️
+3. 首次运行真机需：Xcode → 项目 → Signing & Capabilities → 选择你的 Apple ID 团队
 
-### 4. 后续更新流程
+### 上架 App Store
 
-```bash
-npm run build
-npx cap sync
-npx cap open ios
-```
+1. 在 [App Store Connect](https://appstoreconnect.apple.com) 创建 App
+2. 在 Xcode 中配置签名、创建 App ID
+3. 菜单 Product → Archive → Distribute App
 
-### 其他方案
+### 其他
 
-- **PWA**：添加 `manifest.json` 和 Service Worker，用户可「添加到主屏幕」，无需上架
-- **TWA (Android)**：若需 Android 版，可用 `@capacitor/android` 同样方式打包
+- **Android**：`npx cap add android` 后同样方式打包
+- **PWA**：可添加 manifest 和 Service Worker，用户「添加到主屏幕」使用
 
 ## 技术栈
 

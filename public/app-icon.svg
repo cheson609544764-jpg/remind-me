@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" fill="white"/>
+  <g fill="black" stroke="black" stroke-width="24">
+    <!-- Alarm bells (top) -->
+    <path d="M 320 180 Q 512 120 704 180 L 720 240 L 304 240 Z" fill="black"/>
+    <line x1="260" y1="240" x2="220" y2="160" stroke-width="32"/>
+    <line x1="764" y1="240" x2="804" y2="160" stroke-width="32"/>
+    <!-- Clock face circle -->
+    <circle cx="512" cy="520" r="320" fill="none" stroke-width="48"/>
+    <!-- Hour hand -->
+    <line x1="512" y1="520" x2="512" y2="260" stroke-width="36" stroke-linecap="round"/>
+    <!-- Minute hand -->
+    <line x1="512" y1="520" x2="680" y2="520" stroke-width="28" stroke-linecap="round"/>
+  </g>
+</svg>
